@@ -135,14 +135,14 @@ public class DiceBox
 		}
 	}
 
-	private int getDiceAmount(String Dice)
+	private int getDiceAmount(String dice)
 	{
 		int numberOfDice = 0;
 		String diceNumber = "";
-		char[] diceToRoll = new char[Dice.length()];
-		for(int j = 0; j < Dice.length(); j++)
+		char[] diceToRoll = new char[dice.length()];
+		for(int j = 0; j < dice.length(); j++)
 		{
-			diceToRoll[j] = Dice.charAt(j);
+			diceToRoll[j] = dice.charAt(j);
 		}
 		
 		int i = 0;
@@ -160,19 +160,19 @@ public class DiceBox
 	}
 	
 	
-	private int getMaxDieValue(String Dice)
+	private int getMaxDieValue(String dice)
 	{
-		char[] diceToRoll = new char[Dice.length()];
-		for(int j = 0; j < Dice.length(); j++)
+		char[] diceToRoll = new char[dice.length()];
+		for(int j = 0; j < dice.length(); j++)
 		{
-			diceToRoll[j] = Dice.charAt(j);
+			diceToRoll[j] = dice.charAt(j);
 		}
 		int i = 0;
 		while(diceToRoll[i] != 'd' && diceToRoll[i] != 'D')
 			i++;
 		i++;
 		String maxDie = "";
-		while(i < Dice.length())
+		while(i < dice.length())
 		{
 			maxDie = maxDie + diceToRoll[i];
 			i++;
