@@ -159,7 +159,6 @@ public class DiceBox
 		return numberOfDice;
 	}
 	
-	
 	private int getMaxDieValue(String dice)
 	{
 		char[] diceToRoll = new char[dice.length()];
@@ -181,13 +180,11 @@ public class DiceBox
 		return maximumDieValue;
 	}
 
-
 	private void addDice(int numDice, int dieMax)
 	{
 		int currentTotal = rollDice(numDice,dieMax);
 		diceTotal = diceTotal + currentTotal;
 	}
-	
 
 	private void subtractDice(int numDice, int dieMax)
 	{
@@ -195,19 +192,15 @@ public class DiceBox
 		diceTotal = diceTotal - currentTotal;
 	}
 	
-
 	private void addModifier (int diceMod)
 	{
 		diceTotal += diceMod;
 	}
 	
-
 	private void subtractModifier (int diceMod)
 	{
 		diceTotal -= diceMod;
 	}
-	
-	
 
 	private int rollDice (int numDice, int dieMax)
 	{
@@ -224,7 +217,6 @@ public class DiceBox
 		}
 		return currentTotal;
 	}
-	
 
 	private void invalidEquation()
 	{
@@ -235,11 +227,9 @@ public class DiceBox
 		diceTotal = 0;
 	}
 
-
 	public void printTotal()
 	{
 		System.out.println("Total: " + diceTotal);
 		diceTotal = 0;
 	}
-	
 }
